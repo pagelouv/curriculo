@@ -53,19 +53,6 @@ canvas#energy-lines {
   opacity: 1;
 }
 
-/* Decrypted/glitch effect */
-@keyframes decrypt-glow {
-  0%, 100% { text-shadow: 0 0 5px #ff7b00, 0 0 15px #ff7b00; }
-  50% { text-shadow: 0 0 10px #ff7b00, 0 0 15px #ff7b00; }
-}
-
-/* Heading */
-h1 {
-  animation: decrypt-glow 2s ease-in-out infinite;
-  font-size: clamp(1.5rem, 5vw, 4rem);
-  word-break: break-word;
-}
-
 /* Habilidades técnicas spans */
 span {
   display: inline-flex;
