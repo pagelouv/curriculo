@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo — Diogo Brancher Schmitt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: { tron: '#ff7b00' } } }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      background: #000;
+      color: #f5f5f5;
+      font-family: "Inter", system-ui, sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+    canvas#energy-lines {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
+      filter: blur(4px);
+    }
+    .glass {
+      background: rgba(15, 15, 15, 0.6);
+      border: 1px solid rgba(255, 123, 0, 0.25);
+      backdrop-filter: blur(20px) saturate(180%);
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(255, 123, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .glass:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(255, 123, 0, 0.25);
+    }
+
+    .glare {
+      background: radial-gradient(
+        circle at var(--x, 50%) var(--y, 50%),
+        rgba(255, 123, 0, 0.25),
+        transparent 60%
+      );
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      opacity: 0;
+    }
+
+    .group:hover .glare {
+      opacity: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+  <canvas id="energy-lines"></canvas>
+
+  <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8 relative">
+    <div class="max-w-5xl mx-auto space-y-8">
+
+    <!-- Header -->
+    <div class="glass p-8 sm:p-12 relative group">
+      <div class="absolute inset-0 pointer-events-none glare rounded-xl"></div>
+
+      <div class="flex flex-col sm:flex-row items-center gap-8">
+          <img src="foto.png" alt="Foto de Diogo Brancher Schmitt"
+              class="w-50 aspect-square rounded-full border-2 border-[#ff7b00] object-cover" />
+          <div>
+          <h1 class="text-4xl font-bold text-white">Diogo Brancher Schmitt</h1>
+          <p class="text-orange-400 mb-4">
+              Estudante de Engenharia de Software - 21 anos - Indaial/SC
+          </p>
+          <p class="text-gray-300 mb-4">
+              Apaixonado por tecnologia. Em busca de oportunidades que desenvolvam minha carreira e me permitam participar da criação de soluções que façam a diferença.
+          </p>
+          <p class="text-sm text-gray-400">
+              <a href="mailto:diogobschmitt@gmail.com" class="hover:text-orange-400 transition-colors">📧 diogobschmitt@gmail.com</a> ·
+              <a href="tel:+5547999364221" class="hover:text-orange-400 transition-colors">📞 (47) 99936-4221</a>
+          </p>
+          </div>
+      </div>
+    </div>
+
+    <!-- Habilidades Técnicas -->
+    <div class="glass p-8 relative group">
+      <div class="absolute inset-0 pointer-events-none glare rounded-xl"></div>
+      <h2 class="text-3xl font-bold text-orange-400 mb-6">Habilidades Técnicas</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-center">
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">Python</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">SQL / PostgreSQL / MySQL</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">HTML / CSS</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">Power BI</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">Excel / Google Sheets / Word</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">Git</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">Firebase / Pyrebase</span>
+      </div>
+    </div>
+
+    <!-- Experiência Profissional -->
+    <div class="glass p-8 relative group">
+      <div class="absolute inset-0 pointer-events-none glare rounded-xl"></div>
+      <h2 class="text-3xl font-bold text-orange-400 mb-6">Experiência Profissional</h2>
+
+      <div class="border-l-4 border-orange-500 pl-6 mb-6">
+          <h3 class="text-xl font-semibold text-white">Auxiliar Administrativo - CIMVI</h3>
+          <p class="text-sm text-gray-400">Junho 2025 – Presente | Timbó/SC</p>
+          <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+          <li>Gestão de dados operacionais: conferência de registros de pesagem de caminhões, garantindo rastreabilidade de mais de 6 mil toneladas/mês.</li>
+          <li>Automação de processos internos: desenvolvi de forma autônoma um sistema em Python (Pandas) para controle de insumos e ordens de compra, integrando dados de notas fiscais e volumes licitados. A iniciativa reduziu erros e aumentou a eficiência operacional.</li>
+          <li>Ponto focal entre setores, assegurando comunicação e alinhamento de procedimentos operacionais e administrativos.</li>
+          <li>Elaboração de indicadores administrativos e planilhas de controle para apoiar decisões estratégicas do setor.</li>
+          </ul>
+    </div>
+
+    <div class="border-l-4 border-orange-500 pl-6">
+        <h3 class="text-xl font-semibold text-white">Estagiário - Tribunal Regional Eleitoral de SC (TRE-SC)</h3>
+        <p class="text-sm text-gray-400">Junho 2023 – Junho 2025 | Indaial/SC</p>
+        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+        <li>Suporte administrativo e atendimento ao público no Cartório Eleitoral de Indaial.</li>
+        <li>Gestão documental: organização e rastreabilidade de registros físicos e digitais.</li>
+        <li>Atuação durante as eleições: apoio logístico e administrativo nas etapas de votação e apuração, assegurando eficiência, transparência e conformidade legal.</li>
+        <li>Segurança da informação: aplicação de boas práticas de sigilo, privacidade e proteção de dados sensíveis, com base em treinamentos de Security Awareness (KnowBe4).</li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- Formação Acadêmica -->
+    <div class="glass p-8 relative group">
+      <div class="absolute inset-0 pointer-events-none glare rounded-xl"></div>
+      <h2 class="text-3xl font-bold text-orange-400 mb-6">Formação Acadêmica</h2>
+      <div class="space-y-4">
+          <div>
+          <h3 class="text-xl font-semibold text-white">Centro Universitário Leonardo da Vinci (UNIASSELVI) — Engenharia de Software</h3>
+          <p class="text-sm text-gray-400">Fevereiro 2024 – Presente | Indaial/SC</p>
+          <p class="text-gray-300">Bacharelado em Engenharia de Software, 4º semestre. Previsão de conclusão: 2027.</p>
+          </div>
+          <div>
+          <h3 class="text-xl font-semibold text-white">Universidade Cesumar (EAD)</h3>
+          <p class="text-sm text-gray-400">Fevereiro 2022 – Fevereiro 2024</p>
+          <p class="text-gray-300">Cursado de Bacharelado em Engenharia de Software, posteriormente transferido para UNIASSELVI.</p>
+          </div>
+      </div>
+    </div>
+
+    <!-- Idiomas & Certificações -->
+    <div class="glass p-8 relative group">
+      <div class="absolute inset-0 pointer-events-none glare rounded-xl"></div>
+      <h2 class="text-3xl font-bold text-orange-400 mb-6">Idiomas & Certificações</h2>
+      <p class="text-gray-300 mb-2">🇺🇸 Inglês – Fluente (TOEIC 930, nota máxima em Listening)</p>
+      <p class="text-gray-300 mb-2">📜 Wizard by Pearson – Certificado de Proficiência em Inglês</p>
+    </div>
+
+      <!-- Destaques -->
+    <div class="glass p-8 relative group">
+      <div class="absolute inset-0 pointer-events-none glare rounded-xl"></div>
+      <h2 class="text-3xl font-bold text-orange-400 mb-6">Destaques</h2>
+      <p class="text-gray-300">
+          🏆 Hack Inova 2024 – Projeto de IA para diagnóstico de pragas na agricultura familiar.<br>
+          Responsável pela pesquisa de mercado, estruturação da ideia e apresentação do pitch à banca avaliadora. Experiência prática em inovação, modelagem de ideias e comunicação técnica.
+      </p>
+    </div>
+
+    <footer class="text-center text-sm text-gray-500 mt-6">© 2025 Diogo Brancher Schmitt</footer>
+
+
+  <!-- Fundo animado: Linhas energéticas -->
+  <script>
+    const canvas = document.getElementById('energy-lines');
+    const ctx = canvas.getContext('2d');
+    let w, h, lines = [];
+
+    function resize() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+      lines = Array.from({ length: 25 }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        l: 200 + Math.random() * 200,
+        a: Math.random() * Math.PI * 2,
+        s: 0.5 + Math.random() * 1.5,
+        o: Math.random(),
+      }));
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillRect(0, 0, w, h);
+      ctx.lineWidth = 1.5;
+
+      lines.forEach(line => {
+        ctx.beginPath();
+        const grad = ctx.createLinearGradient(line.x, line.y, line.x + Math.cos(line.a) * line.l, line.y + Math.sin(line.a) * line.l);
+        grad.addColorStop(0, `rgba(255,140,0,${line.o})`);
+        grad.addColorStop(1, `rgba(255, 90, 0, 0)`);
+        ctx.strokeStyle = grad;
+        ctx.moveTo(line.x, line.y);
+        ctx.lineTo(line.x + Math.cos(line.a) * line.l, line.y + Math.sin(line.a) * line.l);
+        ctx.stroke();
+
+        line.x += Math.cos(line.a) * line.s;
+        line.y += Math.sin(line.a) * line.s;
+        line.o += (Math.random() - 0.5) * 0.05;
+        if (line.o < 0) line.o = 0;
+        if (line.o > 1) line.o = 1;
+        if (line.x < -line.l || line.x > w + line.l || line.y < -line.l || line.y > h + line.l) {
+          line.x = Math.random() * w;
+          line.y = Math.random() * h;
+          line.a = Math.random() * Math.PI * 2;
+        }
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  </script>
+
+  <script>
+    // Efeito "Decrypted Text" — inspirado no ReactBits
+    function decryptText(element, text, speed = 40, characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+") {
+      let iteration = 0;
+      const length = text.length;
+
+      const interval = setInterval(() => {
+        element.textContent = text
+          .split("")
+          .map((char, i) => {
+            if (i < iteration) {
+              return text[i];
+            }
+            return characters[Math.floor(Math.random() * characters.length)];
+          })
+          .join("");
+
+        if (iteration >= length) {
+          clearInterval(interval);
+          element.textContent = text;
+        }
+
+        iteration += 1 / 2; // controla a velocidade da "decodificação"
+      }, speed);
+    }
+
+    // Aplica o efeito no nome ao carregar a página
+    window.addEventListener("DOMContentLoaded", () => {
+      const name = document.querySelector("h1");
+      if (name) {
+        const originalText = name.textContent;
+        name.textContent = ""; // começa vazio
+        setTimeout(() => decryptText(name, originalText, 35), 500);
+      }
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('.group').forEach((el) => {
+      const glare = el.querySelector('.glare');
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        glare.style.setProperty('--x', `${x}%`);
+        glare.style.setProperty('--y', `${y}%`);
+      });
+      el.addEventListener('mouseleave', () => {
+        glare.style.setProperty('--x', `50%`);
+        glare.style.setProperty('--y', `50%`);
+      });
+    });
+  </script>
+
+</body>
+</html>
