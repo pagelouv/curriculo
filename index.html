@@ -21,21 +21,25 @@
       overflow-x: hidden;
       position: relative;
     }
+
     canvas#energy-lines {
       position: fixed;
       inset: 0;
       z-index: -1;
       background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
-      filter: blur(4px);
     }
+
     .glass {
-      background: rgba(15, 15, 15, 0.6);
+      background: rgba(15, 15, 15, 0);
       border: 1px solid rgba(255, 123, 0, 0.25);
-      backdrop-filter: blur(20px) saturate(180%);
+      backdrop-filter: blur(7px) saturate(200%);
       border-radius: 1rem;
       box-shadow: 0 0 20px rgba(255, 123, 0, 0.1);
       transition: all 0.3s ease;
+      position: relative;
+      z-index: 0;
     }
+
     .glass:hover {
       transform: translateY(-3px);
       box-shadow: 0 0 25px rgba(255, 123, 0, 0.25);
@@ -53,6 +57,11 @@
 
     .group:hover .glare {
       opacity: 1;
+    }
+
+    h1 {
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
   </style>
@@ -80,8 +89,8 @@
               Apaixonado por tecnologia. Em busca de oportunidades que desenvolvam minha carreira e me permitam participar da criação de soluções que façam a diferença.
           </p>
           <p class="text-sm text-gray-400">
-              <a href="mailto:diogobschmitt@gmail.com" class="hover:text-orange-400 transition-colors">📧 diogobschmitt@gmail.com</a> ·
-              <a href="tel:+5547999364221" class="hover:text-orange-400 transition-colors">📞 (47) 99936-4221</a>
+              <a href="mailto:diogobschmitt@gmail.com" class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200 transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-105 hover:border-tron hover:shadow-[0_0_10px_#ff7b00] hover:bg-orange-500/20">📧 diogobschmitt@gmail.com</a> ·
+              <a href="tel:+5547999364221" class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200 transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-105 hover:border-tron hover:shadow-[0_0_10px_#ff7b00] hover:bg-orange-500/20">📞 (47) 99936-4221</a>
           </p>
           </div>
       </div>
@@ -92,13 +101,13 @@
       <div class="absolute inset-0 pointer-events-none glare rounded-xl"></div>
       <h2 class="text-3xl font-bold text-orange-400 mb-6">Habilidades Técnicas</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-center">
-          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">Python</span>
-          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">SQL / PostgreSQL / MySQL</span>
-          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">HTML / CSS</span>
-          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">Power BI</span>
-          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">Excel / Google Sheets / Word</span>
-          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">Git</span>
-          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200">Firebase / Pyrebase</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200 transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-105 hover:border-tron hover:shadow-[0_0_10px_#ff7b00] hover:bg-orange-500/20 flex items-center justify-center">Python</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200 transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-105 hover:border-tron hover:shadow-[0_0_10px_#ff7b00] hover:bg-orange-500/20 flex items-center justify-center">SQL / PostgreSQL / MySQL</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200 transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-105 hover:border-tron hover:shadow-[0_0_10px_#ff7b00] hover:bg-orange-500/20 flex items-center justify-center">HTML / CSS</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200 transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-105 hover:border-tron hover:shadow-[0_0_10px_#ff7b00] hover:bg-orange-500/20 flex items-center justify-center">Power BI</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200 transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-105 hover:border-tron hover:shadow-[0_0_10px_#ff7b00] hover:bg-orange-500/20 flex items-center justify-center">Excel / Google Sheets / Word</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200 transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-105 hover:border-tron hover:shadow-[0_0_10px_#ff7b00] hover:bg-orange-500/20 flex items-center justify-center">Git</span>
+          <span class="bg-orange-500/10 border border-orange-500/30 rounded-lg py-2 text-gray-200 transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-105 hover:border-tron hover:shadow-[0_0_10px_#ff7b00] hover:bg-orange-500/20 flex items-center justify-center">Firebase / Pyrebase</span>
       </div>
     </div>
 
