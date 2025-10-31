@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Currículo — Diogo Brancher Schmitt</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -11,60 +12,6 @@
       theme: { extend: { colors: { tron: '#ff7b00' } } }
     }
   </script>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      background: #000;
-      color: #f5f5f5;
-      font-family: "Inter", system-ui, sans-serif;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    canvas#energy-lines {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
-    }
-
-    .glass {
-      background: rgba(15, 15, 15, 0);
-      border: 1px solid rgba(255, 123, 0, 0.25);
-      backdrop-filter: blur(7px) saturate(200%);
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(255, 123, 0, 0.1);
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 0;
-    }
-
-    .glass:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 25px rgba(255, 123, 0, 0.25);
-    }
-
-    .glare {
-      background: radial-gradient(
-        circle at var(--x, 50%) var(--y, 50%),
-        rgba(255, 123, 0, 0.25),
-        transparent 60%
-      );
-      transition: opacity 0.4s ease, transform 0.4s ease;
-      opacity: 0;
-    }
-
-    .group:hover .glare {
-      opacity: 1;
-    }
-
-    h1 {
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-
-  </style>
 </head>
 
 <body>

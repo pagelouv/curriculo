@@ -1,0 +1,81 @@
+/* style.css */
+
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  background: #000;
+  color: #f5f5f5;
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Canvas de linhas energéticas */
+canvas#energy-lines {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
+  /* blur removido conforme ajuste */
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(15, 15, 15, 0.6);
+  border: 1px solid rgba(255, 123, 0, 0.25);
+  backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 123, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 0;
+}
+
+.glass:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(255, 123, 0, 0.25);
+}
+
+/* Glare hover */
+.glare {
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 123, 0, 0.25),
+    transparent 60%
+  );
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+}
+
+.group:hover .glare {
+  opacity: 1;
+}
+
+/* Decrypted/glitch effect */
+@keyframes decrypt-glow {
+  0%, 100% { text-shadow: 0 0 5px #ff7b00, 0 0 15px #ff7b00; }
+  50% { text-shadow: 0 0 10px #ff7b00, 0 0 15px #ff7b00; }
+}
+
+/* Heading */
+h1 {
+  animation: decrypt-glow 2s ease-in-out infinite;
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  word-break: break-word;
+}
+
+/* Habilidades técnicas spans */
+span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+span:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #ff7b00;
+  border-color: #ff7b00;
+}
